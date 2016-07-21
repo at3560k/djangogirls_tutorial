@@ -42,3 +42,5 @@ presentations from each
 Setup Notes:
   - "sudo apt get install python3.5" does not work on trusty
   - sign up for python anywhere
+  - the deploy section should've had us use requirements.txt!
+     - THIS will need more than 20 minutes
