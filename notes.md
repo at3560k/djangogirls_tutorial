@@ -41,3 +41,4 @@ presentations from each
 
 Setup Notes:
   - "sudo apt get install python3.5" does not work on trusty
+  - sign up for python anywhere

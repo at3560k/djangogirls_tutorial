@@ -8,7 +8,7 @@ rm -rf ~vagrant/.vim/plugin/xpath.vim
 sudo apt-get update
 sudo apt-get install -y python3.5 python3-venv
 sudo apt-get install -y vim-nox-py2 python-lxml python3-lxml exuberant-ctags \
-    libxml-xpath-perl
+    libxml-xpath-perl git
 
 # dammit, ubuntu
 sudo update-alternatives --set vim /usr/bin/vim.nox-py2
