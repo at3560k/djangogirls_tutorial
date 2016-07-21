@@ -44,3 +44,5 @@ Setup Notes:
   - sign up for python anywhere
   - the deploy section should've had us use requirements.txt!
      - THIS will need more than 20 minutes
+  - urls section is broken right now
+  - html templates section could probably say what file to edit
