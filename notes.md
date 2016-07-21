@@ -47,4 +47,5 @@ Setup Notes:
   - urls section is broken right now
   - html templates section could probably say what file to edit
   - 11_css -- you have to roll runserver after changing static assets (facepalm)
+      - showing people developer tools or firebug might normally rock in this section, but no time
 
