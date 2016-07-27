@@ -1,0 +1,47 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure(2) do |config|
+  # https://docs.vagrantup.com.
+
+  # https://github.com/mitchellh/vagrant/issues/7155
+  #  DAMN IT, canonical!
+  #config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "bento/ubuntu-16.04"
+
+  # Disable automatic box update checking. If you disable this, then
+  # boxes will only be checked for updates when the user runs
+  # `vagrant box outdated`. This is not recommended.
+  config.vm.box_check_update = false
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
+
+  config.vm.synced_folder "../src", "/src"
+
+
+  if Vagrant.has_plugin?("vagrant-vbguest")
+    config.vbguest.auto_update = false
+  end
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+    config.cache.enable :apt
+  end
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "4096"
+  end
+
+  config.vm.provision "file", source: "~/.bashrc",  destination: ".bashrc"
+  #config.vm.provision "file", source: "~/.bash_aliases",  destination: ".bash_aliases"
+  config.vm.provision "file", source: "~/.vimrc",  destination: ".vimrc"
+  config.vm.provision "file", source: "~/.vim", destination: ".vim" 
+
+  config.vm.provision "shell", path: "provisioners/pyladies.sh"
+end
