@@ -37,7 +37,8 @@ manage.py runserver`
 
 Stop the server, (or launch a new shell) and make your admin user.
 
-~~~{#console .bash }
+<div style="font-size: 80%;">
+~~~{.bash}
 (myvenv) ~/djangogirls$ python manage.py createsuperuser
 Username: admin
 Email address: admin@admin.com
@@ -45,7 +46,7 @@ Password:
 Password (again):
 Superuser created successfully.
 ~~~
-
+</div>
 
 ----
 

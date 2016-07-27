@@ -7,7 +7,8 @@ SLIDES := $(patsubst %.md,%.md.html,$(wildcard *.md))
 all: $(SLIDES)
 
 %.md.html : %.md
-	pandoc --self-contained -t dzslides $< -o $@
+	#pandoc --self-contained -c custom.css -t dzslides $< -o $@
+	pandoc --self-contained --smart -t dzslides $< -o $@
 
 # Remove all outputs
 clean :

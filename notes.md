@@ -8,6 +8,8 @@ instructions in tutorial: vagrant or c9
 
 presentations from each
 
+[tutorial](http://tutorial.djangogirls.org/en/)
+
 ## goal: 
 - /r/ schedule for day, timebox
 - motivation vs 'look what I did', but knowing that ... they can do this and have something done
