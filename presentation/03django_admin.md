@@ -28,7 +28,7 @@ from .models import Post
 admin.site.register(Post)
 ~~~
 
-Launch your server and visit [the admin](http://127.0.0.1:800/admin): `python
+Launch your server and visit [the admin](http://127.0.0.1:8000/admin): `python
 manage.py runserver` 
 
 -----
